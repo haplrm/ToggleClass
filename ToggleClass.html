@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Mukta+Malar" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.customDos/jquery-ui.css">
+	<script type="text/javascript" src="jquery-ui-1.12.1.customDos/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1.customDos/jquery-ui.js"></script>
+</head>
+<body>
+
+	<style type="text/css">
+		body{
+			font-family: 'Mukta Malar', sans-serif;
+		}
+
+		button{
+			margin-top: 13px;
+		}
+
+		p{
+			margin: auto;
+		}
+
+		#div1,#div2{
+			display: inline-flex;
+			width: 400px;
+			text-align: center;
+			padding-left: 15px;
+			margin-left: 20px;
+		}
+
+		#contenido{
+			margin: auto;
+			width: 1000px;
+			text-align: center;
+		}
+
+
+		.style1{
+			background-color: #C2185B;
+			border-top: groove;
+			width: 200px;
+			height: 200px;
+		}
+
+		.style2{
+			background-color: #673AB7;
+			color: #fff;
+			border-top: groove;
+			width: 200px;
+			height: 200px;
+		}
+
+		.style3{
+			background-color: #2196F3;
+			font-size: xx-large;
+			border-top: groove;
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(()=>{
+
+			$("button").button();
+
+			$("#btn1").click(()=>{
+				$("#div1").toggle('pulsate',3000);
+			});
+
+			$("#btn2").click(()=>{
+				$("#div2").toggleClass('style3',3000,'easeInBounce');
+			});
+		});
+	</script>
+
+		<div id="contenido">
+		<div id="div1" class="style1">
+		<p>I'M ALEJANDRO!</p>
+		</div>
+
+		<div id="div2" class="style2">
+		<p>MY LAST NAME IS PALACIOS</p>
+		</div>
+		<br>
+
+		<button id="btn1">Toggle</button>
+		<button id="btn2">Toggle Class</button>
+		</div>
+
+</body>
+</html>
